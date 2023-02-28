@@ -1,0 +1,25 @@
+{% extends 'home.html' %} {% block content %}
+<form action="profile" method="POST">
+
+    {% csrf_token %} {{form.as_p}}
+
+    <input type="submit" value="Load" class="a">
+
+
+</form>
+<br>
+<hr>
+
+<h3>Name:</h3>
+<hr>
+<h3>age:</h3>
+<hr>
+<h3>Email:</h3>
+<hr>
+<h3>phone:</h3>
+<hr>
+<h3>disease:</h3>
+<hr>
+<h3>treatment:</h3>
+<hr>
+<br> {% endblock %}

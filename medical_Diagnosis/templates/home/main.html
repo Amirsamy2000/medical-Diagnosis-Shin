@@ -1,0 +1,44 @@
+{% extends 'index.html' %} {% block content %}
+
+
+<div class="container">
+
+    <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="service-item mb-4">
+            <br>
+            <div class="content">
+                <p class="mb-4"> {{description}}</p>
+                <center>
+                    <a href="{{link}}" style="
+                 border: 2px solid #794bc4;
+    color: white;
+    background-color: #794bc4;
+    text-align: center;
+    width: 130px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    margin-bottom: -3px;
+                ">Show</a>
+                </center>
+            </div>
+        </div>
+    </div>
+    <center>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="service-item mb-4">
+                    <div class="content">
+                        <form action="index" method="POST">
+                            {% csrf_token %} {{form.as_p}}
+                            <input type="submit" value="Add">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</div>
+{% endblock %}

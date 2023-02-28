@@ -1,0 +1,63 @@
+{% extends 'auth.html' %} {%load static %} {% block content%}
+
+<form action="index" method="POST">
+    <center>
+        <h1>Log In</h1>
+
+        {% csrf_token %} {{form.as_p}}
+
+
+        <input type="submit" value="Sing in" style="
+         border: 2px solid #794bc4;
+    color: white;
+    background-color: #794bc4;
+    text-align: center;
+    width: 135px;
+    padding-left: 5px;
+    padding-right: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    margin-bottom: -3px;
+    font-size: 16px;
+
+        ">
+        <h5 class="h1-or">Or</h5>
+
+        <a href="register2" style="text-decoration: none;">
+            <center>
+                <h5 class="a">Regiseter as Doctor</h5>
+            </center>
+        </a>
+        <h5 class="h1-or">Or</h5>
+
+        <a href="register" style="text-decoration: none;">
+            <center>
+                <h5 class="a">Regiseter as Patient</h5>
+            </center>
+        </a>
+    </center>
+
+
+</form>
+
+
+
+{% endblock %}
+
+
+
+<!-- <input type="submit" value="Sing in" style="
+border: 2px solid #794bc4;
+color: white;
+background-color: #794bc4;
+text-align: center;
+width: 130px;
+padding-left: 3px;
+padding-right: 3px;
+padding-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+margin-bottom: -3px;
+">
+</form> -->

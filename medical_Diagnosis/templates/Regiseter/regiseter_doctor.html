@@ -1,0 +1,12 @@
+{% extends 'auth.html' %} {% block content%}
+<h1>Doctor</h1>
+<form action="home" method="POST">
+    <center>
+        {% csrf_token %} {{form.as_p}}
+
+        <input type="submit" value="register" class="a">
+    </center>
+
+</form>
+
+{% endblock %}
